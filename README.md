@@ -39,11 +39,28 @@ Utility to display DEM or WBD tile coverage
    aws s3 ls ${BUCKET}/datasets/dem/usgs_mirror/SRTMSWBD.003/2000.02.11/ | awk '{print $4}' | grep -v '^\.' | grep -v .zip.xml > SWBD.txt
    ```
 
-## View coverage
+## View tile coverage
 ```
 ./plot_coverage.py <catalog file>
 ```
-E.g.
+For example:
 ```
 ./plot_coverage.py SRTM1_v3.txt
+```
+
+## View tile coverage differences
+```
+./diff_coverage.py <catalog file 1> <catalog file 2>
+```
+For example:
+```
+./diff_coverage.py SRTM1_v3.txt SWBD.txt
+```
+To dump out a csv of the differences, add a third arg:
+```
+./diff_coverage.py <catalog file 1> <catalog file 2> <output csv file>
+```
+For example:
+```
+./diff_coverage.py SRTM1_v3.txt SWBD.txt dem_wbd_diff.csv
 ```
