@@ -64,3 +64,12 @@ For example:
 ```
 ./diff_coverage.py SRTM1_v3.txt SWBD.txt dem_wbd_diff.csv
 ```
+
+## Generate SWBD tile fills (all land) where SRTM exists but not SWBD
+```
+./generate_fills.py <SRTM catalog file> <SWBD catalog file> <SRTM root url>
+```
+For example:
+```
+./generate_fills.py SRTM1_v3.txt SWBD.txt s3://hysds-v2-dev-product-bucket/datasets/dem/SRTM1_v3
+```
