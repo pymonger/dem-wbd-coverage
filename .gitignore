@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# SWBD
+*.raw
+*.raw.zip
+*.raw.xml
+*.raw.aux.xml
